@@ -100,6 +100,7 @@ Une importance particulière est accordée à l'articulation entre théorie et p
 | [VQA26] | « A Review of Variational Quantum Algorithms: Insights into Fault-Tolerant Quantum Computing. » *arXiv:2604.07909*, 2026. — *VQA de NISQ à FT, barren plateaux, mitigation.* |
 | [NOI26] | « NOISE-VQA: Convergence and Complexity Analysis of VQA with Finite-Shot and Biased Oracles. » *Journal of Computational and Applied Mathematics*, Juin 2026. |
 | [Ben26] | « Benchmarking variational quantum algorithms for combinatorial optimization in practice. » *Quantum Machine Intelligence* 8, 26 (2026). |
+| [Ader26] | **Adermann, L. et al.** « Lightweight Error Detection for Variational Quantum Classifiers. » *arXiv*, 2026. — *Code [[4,2,2]] pour VQC, amélioration accuracy sous bruit.* |
 
 ### Applications
 
@@ -159,7 +160,7 @@ Une importance particulière est accordée à l'articulation entre théorie et p
 | Séance | Contenu | Références |
 |--------|---------|------------|
 | **12.1** | **Bruit et mitigation pour QML.** Modèles de bruit (dépolarisant, amplitude/phase damping). Error mitigation : zero-noise extrapolation, probabilistic error cancellation, CVaR. Impact sur l'entraînement des VQC. | [VQA26] ; [NOI26] |
-| **12.2** | **Partial Quantum Error Correction (pQEC) pour QML.** Correction partielle pour VQC : code [[4,2,2]]. Fidélité améliorée ×9.27. Compromis ressources-performance. Passage de NISQ à EFT. | [VQA26] ; [Adermann 2026] |
+| **12.2** | **Partial Quantum Error Correction (pQEC) pour QML.** Correction partielle pour VQC : code [[4,2,2]]. Fidélité améliorée ×9.27. Compromis ressources-performance. Passage de NISQ à EFT. | [VQA26] ; [Ader26] |
 | **13.1** | **Plateformes matérielles pour QML.** Supraconducteurs (IBM Condor, Google Willow) : avantages, limites pour QML. Atomes neutres (Harvard/QuEra) : reconfigurabilité. Ions piégés (IonQ, Oxford Ionics) : haute fidélité 99.99%. Photonique (Photonic Inc., Xanadu). | [Fra26] ; [Rev26] |
 | **13.2** | **Déploiement cloud et multi-plateforme.** IBM Quantum, Amazon Braket, Azure Quantum. Framework-agnostic QNN : ONNX export, transpilation automatique. Benchmark multi-backend : gradient MAE ≤ 0.006 sur 4 fournisseurs. | [Fra26] ; [QML25] |
 | **14.1** | **Applications industrielles du QML.** Chimie quantique et drug discovery (VQE). Finance : optimisation de portefeuille (QAOA), détection de fraudes (QSVM). Santé : PathMNIST, classification histopathologique. Matériaux. Agriculture : PlantVillage. | [Rev26] ; [Tra25] ; [LCU26] |

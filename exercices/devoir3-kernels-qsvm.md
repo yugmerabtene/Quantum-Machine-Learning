@@ -214,17 +214,16 @@ Discussion :
 Implémenter le kernel alignment pour optimiser les paramètres du `ZZFeatureMap` :
 
 ```python
-from pennylane import qml
-from pennylane.templates import ZZFeatureMap
+import pennylane as qml
+from pennylane import numpy as np
+from qiskit.circuit.library import ZZFeatureMap
 
-# Feature map paramétrée
-def param_feature_map(x, params):
-    ZZFeatureMap(x, wires=range(n_qubits))
-    # Couches variationnelles supplémentaires avec params
-    for p in params:
-        for i in range(n_qubits):
-            qml.RX(p[i], wires=i)
-        qml.broadcast(qml.CNOT, wires=range(n_qubits), pattern='ring')
+# Feature map paramétrée (Qiskit pour le ZZFeatureMap)
+def param_feature_map(x, n_qubits):
+    """Crée un circuit ZZFeatureMap paramétré avec Qiskit."""
+    fm = ZZFeatureMap(feature_dimension=n_qubits, reps=2)
+    fm_circuit = fm.assign_parameters(x[:n_qubits])
+    return fm_circuit
 ```
 
 Définir la fonction de coût d'alignement :
@@ -258,12 +257,17 @@ Simuler un bruit dépolarisant sur le kernel quantique :
 ```python
 import pennylane as qml
 
-# Device avec bruit
-noise_model = qml.NoiseModel()
-noise_model.add_all_qubit_depolarizing(error_prob=0.01)
-
+# Device avec bruit dépolarisant (utilise default.mixed pour simuler le bruit)
 dev_noisy = qml.device("default.mixed", wires=n_qubits)
-# ou utiliser qml.qinfo.transforms pour ajouter du bruit
+
+@qml.qnode(dev_noisy)
+def noisy_kernel(x1, x2):
+    qml.AngleEmbedding(x1, wires=range(n_qubits))
+    qml.adjoint(qml.AngleEmbedding)(x2, wires=range(n_qubits))
+    # Ajout de bruit dépolarisant après chaque couche
+    for i in range(n_qubits):
+        qml.DepolarizingChannel(0.01, wires=i)
+    return qml.probs(wires=range(n_qubits))[0]
 ```
 
 #### Question 8.2

@@ -26,7 +26,7 @@ où $\{|0\rangle, |1\rangle\}$ est la base de calcul. Un qubit peut exister dans
 import pennylane as qml
 import numpy as np
 
-dev = qml.device("default.qubit", wires=1)
+dev = qml.device("default.qubit", wires=2)
 
 @qml.qnode(dev)
 def superposition():
@@ -34,7 +34,7 @@ def superposition():
     return qml.state()
 
 print(f"État après Hadamard : {superposition()}")
-# Retourne [1/√2, 1/√2]
+# Retourne [1/√2, 1/√2, 0, 0]
 ```
 
 ## Portes quantiques
@@ -79,14 +79,14 @@ $$
 Elle agit comme : $|00\rangle \mapsto |00\rangle$, $|01\rangle \mapsto |01\rangle$, $|10\rangle \mapsto |11\rangle$, $|11\rangle \mapsto |10\rangle$.
 
 ```python
-@qml.qnode(dev)
+dev2 = qml.device("default.qubit", wires=2)
+
+@qml.qnode(dev2)
 def bell_state():
     qml.Hadamard(wires=0)
     qml.CNOT(wires=[0, 1])
     return qml.state()
 
-dev2 = qml.device("default.qubit", wires=2)
-qml.QNode(bell_state, dev2)
 print(f"État de Bell : {bell_state()}")
 ```
 
@@ -130,7 +130,9 @@ $$
 $$
 
 ```python
-@qml.qnode(dev)
+dev1 = qml.device("default.qubit", wires=1)
+
+@qml.qnode(dev1)
 def measure_expectation():
     qml.Hadamard(wires=0)
     return qml.expval(qml.PauliZ(0))
@@ -194,7 +196,7 @@ L'état de sortie est $|\psi_{\text{out}}\rangle = U |0\rangle^{\otimes n}$.
 **Universalité** : tout opérateur unitaire peut être approximé avec une précision arbitraire par un circuit utilisant seulement les portes $H$, $T$, et CNOT (ensemble universel). En pratique, on utilise des jeux de portes plus riches ($R_x, R_y, R_z, CX$) pour faciliter l'implémentation.
 
 ```python
-@qml.qnode(dev)
+@qml.qnode(dev2)
 def quantum_circuit(params):
     # Encodage
     qml.RX(params[0], wires=0)

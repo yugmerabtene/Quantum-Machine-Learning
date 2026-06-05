@@ -127,10 +127,14 @@ La sortie de l'attention est passée dans un bloc QWKAN qui remplace le MLP clas
 Un VQC final agrège les représentations et produit la classification.
 
 ```python
-class QuantumTransformer(torch.nn.Module):
+import torch
+import torch.nn as nn
+import pennylane as qml
+
+class QuantumTransformer(nn.Module):
     def __init__(self, n_qubits=4, n_heads=4, n_layers=6):
         super().__init__()
-        self.patch_embed = torch.nn.Conv2d(3, 64, kernel_size=4, stride=4)
+        self.patch_embed = nn.Conv2d(3, 64, kernel_size=4, stride=4)
         self.attention_heads = nn.ModuleList([
             QuantumAttentionHead(n_qubits) for _ in range(n_heads)
         ])

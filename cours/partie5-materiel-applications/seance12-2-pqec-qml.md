@@ -185,6 +185,7 @@ Le passage à l'EFT pour le QML suit un calendrier prévisionnel :
 ## Références
 
 - [VQA26] « A Review of Variational Quantum Algorithms: Insights into Fault-Tolerant Quantum Computing. » *arXiv:2604.07909*, 2026.
+- [Ader26] Adermann, L. et al. « Lightweight Error Detection for Variational Quantum Classifiers. » *arXiv*, 2026.
 - [NOI26] « NOISE-VQA: Convergence and Complexity Analysis of VQA with Finite-Shot and Biased Oracles. » *Journal of Computational and Applied Mathematics*, Juin 2026.
 - [Rev26] « A review of quantum machine learning algorithms, applications, and emerging advantages. » *Discover Computing*, Avril 2026.
 - [Fra26] « A Framework-Agnostic Quantum Neural Network Architecture. » *arXiv:2604.04414*, Avril 2026.

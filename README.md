@@ -133,8 +133,25 @@ labs/                               # Travaux pratiques (Jupyter notebooks)
 └── lab13-integration-project/
 
 code/                               # Scripts Python et utilitaires
+├── requirements.txt                # Dépendances Python
+└── utils/                          # Fonctions utilitaires
+    ├── helpers.py                  # Visualisation, métriques
+    ├── data_utils.py               # Chargement de données
+    ├── vqe_utils.py                # Utilitaires VQE
+    └── qaoa_utils.py               # Utilitaires QAOA
+
 exercices/                          # Devoirs
+├── devoir1-fondements-encodage.md
+├── devoir2-vqc-barren.md
+├── devoir3-kernels-qsvm.md
+└── devoir4-hybride-projet.md
+
 references/                         # Ressources complémentaires
+└── references.md                   # Bibliographie détaillée
+
+cours/                              # Index des notes de cours
+└── index.md                        # Table des matières avec liens
+
 syllabus-quantum-machine-learning.md # Syllabus détaillé original
 ```
 

@@ -142,7 +142,7 @@ Le **théorème de représentation** (Kimeldorf & Wahba, 1971) stipule que la so
 
 $$
 f^*(x) = \sum_{i=1}^m \alpha_i \, k(x_i, x)
-```
+$$
 
 Cette représentation est fondamentale car elle ramène un problème d'optimisation en dimension infinie à un problème en dimension $m$ (taille de l'échantillon).
 

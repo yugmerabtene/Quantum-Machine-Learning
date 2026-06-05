@@ -199,6 +199,7 @@ loss_fn = nn.CrossEntropyLoss()
 from qiskit.circuit.library import ZZFeatureMap, RealAmplitudes
 from qiskit_machine_learning.neural_networks import EstimatorQNN
 from qiskit_machine_learning.classifiers import NeuralNetworkClassifier
+from qiskit.algorithms.optimizers import COBYLA
 
 n_qubits = 4
 
@@ -211,7 +212,6 @@ ansatz = RealAmplitudes(num_qubits=n_qubits, reps=3)
 # QNN
 estimator_qnn = EstimatorQNN(
     circuit=ansatz.compose(feature_map, front=True),
-    observables=[qml.Z(0)],
     input_params=feature_map.parameters,
     weight_params=ansatz.parameters
 )

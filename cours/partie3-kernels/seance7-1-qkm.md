@@ -48,16 +48,16 @@ Le *swap test* (Buhrman et al., 2001) permet d'estimer la fidélité entre deux 
 ```python
 import pennylane as qml
 
-dev = qml.device("default.qubit", wires=3, shots=1000)
+dev = qml.device("default.qubit", wires=5, shots=1000)
 
 @qml.qnode(dev)
 def swap_test(x_params, xprime_params):
-    # États |psi(x)>
+    # États |psi(x)> sur les qubits 0-1
     qml.AngleEmbedding(x_params, wires=[0, 1])
-    # États |psi(x')>
+    # États |psi(x')> sur les qubits 2-3
     qml.AngleEmbedding(xprime_params, wires=[2, 3])
-    # Swap test
-    qml.Hadamard(wires=4)  # ancilla
+    # Swap test avec ancilla sur le qubit 4
+    qml.Hadamard(wires=4)
     qml.CSWAP(wires=[4, 0, 2])
     qml.CSWAP(wires=[4, 1, 3])
     qml.Hadamard(wires=4)
@@ -184,13 +184,13 @@ Matrice de Gram (10×10) :
 from pennylane.kernels import quantum_kernel_alignment
 
 def trained_kernel(x1, x2, params):
-    # Feature map paramétrée
-    qaml.AngleEmbedding(x1, wires=range(n_qubits))
+# Feature map paramétrée
+    qml.AngleEmbedding(x1, wires=range(n_qubits))
     for i in range(n_qubits):
-        qaml.RY(params[i], wires=i)
-    qaml.adjoint(qml.AngleEmbedding)(x2, wires=range(n_qubits))
+        qml.RY(params[i], wires=i)
+    qml.adjoint(qml.AngleEmbedding)(x2, wires=range(n_qubits))
     for i in range(n_qubits):
-        qaml.RY(-params[i], wires=i)
+        qml.RY(-params[i], wires=i)
     return qml.probs(wires=range(n_qubits))[0]
 
 # Optimisation par kernel alignment

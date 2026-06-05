@@ -205,7 +205,7 @@ Tester sur le dataset Iris (binaire : classe 0 vs. 1). Le nombre de couches opti
 ## 3. Pistes et ressources
 
 - **McClean et al. (2018)** : *Barren plateaus in quantum neural network training landscapes*, Nature Communications 9, 4812
-- **Grant et al. (2019)** : *An initialization strategy for addressing barren plateaus in parametrized quantum quantum circuits*, Quantum 3, 214
+- **Grant et al. (2019)** : *An initialization strategy for addressing barren plateaus in parametrized quantum circuits*, Quantum 3, 214
 - **NOM — Li et al. (2026)** : *Learning parameterized quantum circuits with quantum gradient*, npj Quantum Information 12, 59
 - **PennyLane gradient documentation** : https://docs.pennylane.ai/en/stable/introduction/interfaces.html
 - **Schuld & Petruccione (2021)** : Chapitre 5 — Variational quantum circuits
