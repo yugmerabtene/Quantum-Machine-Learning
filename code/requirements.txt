@@ -1,0 +1,27 @@
+# Quantum Machine Learning - Dépendances
+pennylane>=0.45
+pennylane-cirq
+
+qiskit>=1.0
+qiskit-aer
+qiskit-machine-learning
+qiskit-nature
+qiskit-ibm-runtime
+
+cirq>=1.0
+stim
+amazon-braket-sdk
+
+torch>=2.0
+torchvision
+scikit-learn>=1.2
+numpy>=1.24
+scipy>=1.10
+matplotlib>=3.7
+seaborn>=0.12
+pandas>=2.0
+networkx>=3.0
+
+jupyter
+ipykernel
+tqdm
