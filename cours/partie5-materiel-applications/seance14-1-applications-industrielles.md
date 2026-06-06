@@ -124,7 +124,7 @@ class QuantumTransferModel(nn.Module):
     def __init__(self, n_qubits=8, n_layers=4):
         super().__init__()
         # Backbone classique (gelé)
-        self.backbone = models.resnet18(pretrained=True)
+        self.backbone = models.resnet18(weights=models.ResNet18_Weights.DEFAULT)
         self.backbone.fc = nn.Identity()  # supprime la tête classique
         for param in self.backbone.parameters():
             param.requires_grad = False
@@ -155,7 +155,7 @@ Sur **PlantVillage** (détection de maladies sur feuilles, 38 classes), la même
 
 ## Énergie : optimisation de charge de véhicules électriques
 
-Un benchmark récent [LCU26] a utilisé des *kernels quantiques covaraints* avec BFT sur 40+ qubits pour optimiser la charge de flottes de véhicules électriques. L'objectif est de minimiser le coût total sous contrainte de capacité du réseau et de temps de charge :
+Un benchmark récent [LCU26] a utilisé des *kernels quantiques covariants* avec BFT sur 40+ qubits pour optimiser la charge de flottes de véhicules électriques. L'objectif est de minimiser le coût total sous contrainte de capacité du réseau et de temps de charge :
 
 $$
 \min_{\mathbf{t}} \sum_{i} P_i(t_i) + \lambda \max\left(0, \sum_i p_i(t_i) - C\right)

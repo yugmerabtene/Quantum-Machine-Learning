@@ -128,7 +128,7 @@ def iris_to_images(X, img_size=32):
 from torchvision import models
 
 # Charger ResNet18 pré-entraîné, sans la tête fully-connected
-resnet = models.resnet18(pretrained=True)
+resnet = models.resnet18(weights=models.ResNet18_Weights.DEFAULT)
 modules = list(resnet.children())[:-1]  # Enlever le FC final
 feature_extractor = nn.Sequential(*modules)
 

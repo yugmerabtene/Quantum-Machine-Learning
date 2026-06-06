@@ -380,6 +380,6 @@ La dégradation est corrélée avec la fidélité du circuit (produit des fidél
 - [Rev26] « A review of quantum machine learning algorithms, applications, and emerging advantages. » *Discover Computing*, Avril 2026.
 - [SP21] Schuld, M. & Petruccione, F. *Machine Learning with Quantum Computers.* 2nd ed., Springer, 2021.
 - [Car21] Caro, M.-C. et al. « Generalization in quantum machine learning from few training data. » *Nature Communications*, 2021.
-- [Mc21] McClean, J. R. et al. « Barren plateaus in quantum neural network training landscapes. » *Nature Communications*, 2018.
-- [Hol01] holmes, E. et al. « Connecting practical and theoretical advances in quantum machine learning. » *arXiv:2304.01292*, 2023.
+- [Mc18] McClean, J. R. et al. « Barren plateaux in quantum neural network training landscapes. » *Nature Communications*, 2018.
+- [Hol23] Holmes, E. et al. « Connecting practical and theoretical advances in quantum machine learning. » *arXiv:2304.01292*, 2023.
 - [Gan23] Gao, X. et al. « Quantum advantages for the classification of classical data. » *Physical Review Letters*, 2023.

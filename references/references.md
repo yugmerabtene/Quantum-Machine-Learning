@@ -5,11 +5,15 @@
 | Abréviation | Ouvrage |
 |-------------|---------|
 | [SP21] | Schuld, M. & Petruccione, F. *Machine Learning with Quantum Computers.* 2nd ed., Springer, 2021. |
+| [SC24] | Schuld, M. *Supervised Learning with Quantum Computers.* Springer, 2024. |
 | [DWQ25] | Du, Y. et al. *A Gentle Introduction to Quantum Machine Learning.* Springer, 2025. |
 | [NC00] | Nielsen, M. A. & Chuang, I. L. *Quantum Computation and Quantum Information.* Cambridge University Press, 2000. |
+| [Aar13] | Aaronson, S. *Quantum Computing Since Democritus.* Cambridge University Press, 2013. |
+| [Pre98] | Preskill, J. *Lecture Notes for Physics 219: Quantum Computation.* Caltech, 1998–2023. |
 | [Bis06] | Bishop, C. M. *Pattern Recognition and Machine Learning.* Springer, 2006. |
 | [MRT18] | Mohri, M., Rostamizadeh, A. & Talwalkar, A. *Foundations of Machine Learning.* 2nd ed., MIT Press, 2018. |
 | [GBC16] | Goodfellow, I., Bengio, Y. & Courville, A. *Deep Learning.* MIT Press, 2016. |
+| [Con22] | Cong, I. « Quantum Machine Learning, Error Correction, and Topological Phases of Matter. » *Thèse de doctorat, Harvard University*, 2022. |
 
 ## Articles de recherche récents (2024–2026)
 
@@ -41,6 +45,9 @@
 - [Tra25] « Quantum transfer learning for image classification. » *arXiv:2603.16973* (2025).
 - [QML25] Qiskit ML Contributors. « Qiskit Machine Learning: an open-source library. » *arXiv:2505.17756* (2025).
 - [Rev26] « A review of QML algorithms, applications, and emerging advantages. » *Discover Computing* (2026).
+- [Pen26] **Xanadu.** « Why quantum computers could be great for machine learning after all. » *PennyLane Blog*, Mars 2026.
+- [Ader26] Adermann, L. et al. « Lightweight Error Detection for Variational Quantum Classifiers. » *arXiv*, 2026.
+- [Ben26] « Benchmarking variational quantum algorithms for combinatorial optimization in practice. » *Quantum Machine Intelligence* 8, 26 (2026).
 
 ## Cours en ligne
 

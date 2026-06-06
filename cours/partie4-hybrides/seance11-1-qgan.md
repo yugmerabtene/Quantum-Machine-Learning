@@ -148,7 +148,7 @@ L'Hamiltonien typique inclut des termes locaux et d'interaction :
 
 $$
 H_\theta = \sum_{i} a_i \sigma_i^z + \sum_{i<j} b_{ij} \sigma_i^z \sigma_j^z + \sum_{i} c_i \sigma_i^x
-```
+$$
 
 L'entraînement consiste à minimiser la log-vraisemblance négative :
 

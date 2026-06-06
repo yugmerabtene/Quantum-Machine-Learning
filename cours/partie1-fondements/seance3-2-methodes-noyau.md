@@ -336,7 +336,7 @@ Le KTA est utilisé pour **sélectionner les hyperparamètres** du noyau (ex : $
 
 $$
 \gamma^* = \arg\max_{\gamma} \hat{A}(K_\gamma, yy^T)
-```
+$$
 
 ## Théorie de la régularisation par noyau
 
